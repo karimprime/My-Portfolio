@@ -235,10 +235,10 @@ section {
     background-color: #fff;
     border: 1px solid #fff;
     min-height: 14em;
-    width: 23em;
+    width: 20em;
     overflow: hidden;
     border-radius: 10px;
-    margin: 10px;
+    margin: 5px;
     transition: 0.7s;
 }
 
