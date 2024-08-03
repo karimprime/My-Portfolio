@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    /*it is use for enter size border or padding in size media or content*/
+    scroll-behavior: smooth;
+    /*control the style scroll and more effective*/
+}
+
+header {
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    /* make header move with scroll*/
+    z-index: 999;
+    /*make header always on*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #3a6cf4;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+    /*em is relative to parent value =  num em * num of parent like 1.8em * defalt value (16px) */
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #3a6cf4;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding-left: 30px;
+    transition: 0.5s;
+}
+
+.navigation a:hover,
+.more-details:hover {
+    color: #601cfc;
+}
+
+
+section {
+    padding: 100px 200px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(images/j1.jpg) no-repeat;
+    /*background: linear-gradient(to left, #0f2084fe, #000000bb);*/
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main:hover {
+    background-image:
+        linear-gradient(to right, #1e8be333, transparent),
+        url(images/j1.jpg);
+}
+
+.main h2 {
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.main h2 span {
+    display: inline-block;
+    color: #4e9eff;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.main h3 {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.main-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #3a6cf4;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s;
+}
+
+.main-btn:hover {
+    background-color: #0a49f6;
+    transform: scale(1.1);
+}
+
+.main .soical-icons a {
+    color: #fff;
+    font-size: 1.7em;
+    padding-left: 20px;
+    transition: 0.7s;
+}
+
+.main .soical-icons a:hover {
+    color: #0a49f6;
+    font-size: 40px;
+    transform: scale(1.9);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    /*: top or -botton right or -left blur color || rgba(red green blue /opacity)*/
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.5s;
+}
+
+.card:hover,
+.project-card:hover {
+    transform: scale(1.1);
+    background: #f0f0f0;
+}
+
+.icon {
+    color: #3a6cf4;
+    font-size: 8em;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.info p {
+    color: black;
+    font-size: 1.1em;
+    margin: 10px;
+}
+
+.contact .icon {
+    font-size: 4.5em;
+}
+
+.personal-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+}
+
+.personal-contact i {
+    font-size: 8em;
+    color: #3a6cf4;
+
+}
+
+.personal-contact h3,
+.personal-contact p {
+    font-size: 1.2em;
+    color: #000;
+}
+
+.personal-contact .mail,
+.personal-contact .phone {
+    display: flex;
+    align-items: center;
+
+}
+
+.personal-contact .mail i:last-child,
+.personal-contact .phone i:last-child {
+    display: none;
+}
+
+.personal-contact .mail:hover i:first-child,
+.personal-contact .phone:hover i:first-child {
+    display: none;
+}
+
+.personal-contact .mail:hover i:last-child,
+.personal-contact .phone:hover i:last-child {
+    display: inline;
+}
+
+.projects {
+    background: #000515;
+}
+
+.projects .content {
+    margin: 30px;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+    background: #cfcfcf;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.project-info {
+    padding: 1em;
+}
+
+.project-category {
+    font-size: 0.8em;
+    color: #000;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.more-details {
+    text-decoration: none;
+    color: #3a6cf4;
+    transition: 0.5s;
+}
+
+.footer {
+    background: #000515;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-title {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.footer-title a {
+    text-decoration: none;
+    color: #0a49f6;
+}
+
+.footer .soical-icons a {
+    color: #cfcfcf;
+    font-size: 1.8em;
+    padding-left: 20px;
+    transition: 0.5s;
+}
+
+.footer .soical-icons a:hover {
+    color: #0a49f6;
+}
+
+@media (max-width:1023px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    .navigation a {
+        padding-left: 10px;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .main-content h2 {
+        font-size: 1em;
+    }
+
+    .main-contact h3 {
+        font-size: 1.6em;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer {
+        font-size: 0.8em;
+    }
+
+}
+
+@media (max-width:641px) {
+    body {
+        font-size: 12px;
+    }
+
+    .main-content h2 {
+        font-size: 0.8em;
+    }
+
+    .main-content h3 {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px) {
+    body {
+        font-size: 10px;
+    }
+}
