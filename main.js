@@ -8,3 +8,11 @@ window.onscroll = function () { // event like onclick
         btn.style.display = 'none';
     }
 }
+
+btn.onclick = function () {
+    scroll({
+        left: 0,
+        top: 0,
+        behavior: 'smooth', // use for controll move of scroll
+    })
+}
