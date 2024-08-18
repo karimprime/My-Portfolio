@@ -44,7 +44,7 @@ header {
 }
 
 .navigation a:hover,
-.more-details:hover {
+.more-details:hover , #blight:hover , #bdark:hover{
     color: #601cfc;
 }
 
