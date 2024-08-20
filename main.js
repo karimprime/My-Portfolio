@@ -36,7 +36,7 @@ prevBtn.addEventListener('click', () => {
 });
 
 nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex < cards.length - 2) ? currentIndex + 1 : 0;
+    currentIndex = (currentIndex < cards.length - 1) ? currentIndex + 1 : 0;
     updateSliderPosition();
 });
 
