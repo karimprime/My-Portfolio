@@ -11,9 +11,7 @@
     margin: 0;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
-    /*it is use for enter size border or padding in size media or content*/
     scroll-behavior: smooth;
-    /*control the style scroll and more effective*/
 }
 
 
@@ -65,8 +63,30 @@
     color: #05298b;
 }
 
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #05298b;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
 .nav-links li a:hover {
-    background-color: #0a49f6;
+    background-color: #05298b;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.nav-links li a:hover::before {
+    transform: scaleX(1);
+}
+
+.nav-links li a:hover {
+    background-color: #05298b;
     color: #fff;
     transform: scale(1.05);
 }
@@ -190,7 +210,6 @@ section {
     display: flex;
     align-items: center;
     background: url(../images/j1.jpg) no-repeat;
-    /*background: linear-gradient(to left, #0f2084fe, #000000bb);*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -273,7 +292,6 @@ section {
     background-color: #fff;
     width: 21.25em;
     box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-    /*: top or -botton right or -left blur color || rgba(red green blue /opacity)*/
     border-radius: 10px;
     padding: 25px;
     margin: 15px;
@@ -284,7 +302,6 @@ section {
     background-color: #fff;
     width: 14.25em;
     box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-    /*: top or -botton right or -left blur color || rgba(red green blue /opacity)*/
     border-radius: 10px;
     padding: 25px;
     margin: 15px;
@@ -554,8 +571,6 @@ section {
 
 }
 
-
-
 .tit,
 .tit1 {
     color: #4e9eff;
@@ -610,25 +625,20 @@ section {
     right: 0px;
 }
 
-
 /*Dark Mod Style*/
 
 .dark-mode {
     background-color: #222;
-    /* Background color for dark mode */
-    color: white;
-    /* Text color for dark mode */
+    color: #fff;
 }
 
 .dark-mode a {
     color: white;
-    /* Ensures that all links have white color in dark mode */
 }
 
 .dark-mode .project-category,
 .dark-mode .project-title a {
     color: white;
-    /* Ensures specific project titles and categories are also white */
 }
 
 .dark-mode .main .main-btn {
@@ -686,8 +696,6 @@ section {
 .dark-mode .project-category,
 .dark-mode .card p {
     color: white;
-
-    /* Ensures specific project titles and categories are also white */
 }
 
 .dark-mode .more-details:hover {
@@ -715,7 +723,6 @@ section {
 .hide {
     display: none;
 }
-
 
 /*Dark Mod Nav bar*/
 
@@ -753,6 +760,15 @@ section {
     border-radius: 5px;
 }
 
+.dark-mode .nav-links li a::before{
+    background-color: #601cfc;
+}
+
+.dark-mode .nav-links li a:hover {
+    background-color: #601cfc;
+    color: #fff;
+}
+
 .dark-mode .btnl .bar{
     background-color: #fff;
 }
@@ -764,47 +780,3 @@ section {
 .dark-mode .bar-list a:hover{
     color: #601cfc;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
