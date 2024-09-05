@@ -5,18 +5,14 @@
     margin: 0;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
-    /*it is use for enter size border or padding in size media or content*/
     scroll-behavior: smooth;
-    /*control the style scroll and more effective*/
 }
 
 header {
     background-color: #f0f0f0;
     width: 100%;
     position: fixed;
-    /* make header move with scroll*/
     z-index: 999;
-    /*make header always on*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +26,6 @@ header {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.8em;
-    /*em is relative to parent value =  num em * num of parent like 1.8em * defalt value (16px) */
 }
 
 .navigation a {
@@ -90,7 +85,6 @@ section {
     display: flex;
     align-items: center;
     background: url(images/j1.jpg) no-repeat;
-    /*background: linear-gradient(to left, #0f2084fe, #000000bb);*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -145,13 +139,13 @@ section {
     color: #fff;
     font-size: 1.7em;
     padding-left: 20px;
-    transition: 0.7s;
+    transition: 0.5s;
 }
 
 .main .soical-icons a:hover {
     color: #0a49f6;
     font-size: 40px;
-    transform: scale(1.9);
+    transform: scale(1.1);
 }
 
 .title {
@@ -173,7 +167,16 @@ section {
     background-color: #fff;
     width: 21.25em;
     box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-    /*: top or -botton right or -left blur color || rgba(red green blue /opacity)*/
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.5s;
+}
+
+.cardt {
+    background-color: #fff;
+    width: 14.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
     border-radius: 10px;
     padding: 25px;
     margin: 15px;
@@ -181,7 +184,8 @@ section {
 }
 
 .card:hover,
-.project-card:hover {
+.project-card:hover,
+.cardt:hover {
     transform: scale(1.1);
     background: #f0f0f0;
 }
@@ -414,9 +418,11 @@ section {
 }
 
 @media (max-width:641px) {
+
     body {
-        font-size: 12px;
+        font-size: 11px;
     }
+
 
     .main-content h2 {
         font-size: 0.8em;
@@ -424,6 +430,17 @@ section {
 
     .main-content h3 {
         font-size: 1.4em;
+    }
+    .cardt{
+        width: 9.25em;
+    }
+
+    .icon {
+        font-size: 4em;
+    }
+    
+    .info h3 {
+        font-size: 0.8em;
     }
 
 }
@@ -436,8 +453,6 @@ section {
 }
 
 
-
-/* styles.css */
 
 
 .tit,
@@ -495,24 +510,22 @@ section {
 }
 
 
+
+
 /*Dark Mod Style*/
 
 .dark-mode {
     background-color: #222;
-    /* Background color for dark mode */
     color: white;
-    /* Text color for dark mode */
 }
 
 .dark-mode a {
     color: white;
-    /* Ensures that all links have white color in dark mode */
 }
 
 .dark-mode .project-category,
 .dark-mode .project-title a {
     color: white;
-    /* Ensures specific project titles and categories are also white */
 }
 
 .dark-mode .main .main-btn {
@@ -530,7 +543,7 @@ section {
 .dark-mode .main .soical-icons a:hover {
     color: #601cfc;
     font-size: 40px;
-    transform: scale(1.9);
+    transform: scale(1.1);
 }
 
 
@@ -561,7 +574,8 @@ section {
 
 
 .dark-mode .project-category,
-.dark-mode .card {
+.dark-mode .card,
+.dark-mode .cardt {
     background: #222;
     border-color: #222;
 }
@@ -570,7 +584,6 @@ section {
 .dark-mode .card p {
     color: white;
 
-    /* Ensures specific project titles and categories are also white */
 }
 
 .dark-mode .more-details:hover {
