@@ -100,9 +100,6 @@ nextBtn1.addEventListener('click', () => {
 const header = document.querySelector('header');
 const body = document.querySelector('body');
 
-const nav = document.querySelector('.navbar');
-const navl = document.querySelector('.nav-links');
-
 const ld = document.getElementById('ld'); // Light mode toggle element
 const dl = document.getElementById('dl'); // Dark mode toggle element
 
@@ -115,16 +112,10 @@ function colors(color) {
         body.classList.add('dark-mode');
         ld.classList.add('hide');
         dl.classList.remove('hide');
-        body.style.transition = "1s";
-        nav.style.transition = "1s";
-        navl.style.transition = "1s";
     } else {
         body.classList.remove('dark-mode');
         dl.classList.add('hide');
         ld.classList.remove('hide');
-        body.style.transition = "1s";
-        nav.style.transition = "1s";
-        navl.style.transition = "1s";
     }
 }
 
