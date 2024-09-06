@@ -49,6 +49,7 @@
     list-style: none;
     display: flex;
     gap: 20px;
+    background: #f0f0f0;
 }
 
 .nav-links li a {
@@ -65,7 +66,10 @@
     color: #05298b;
 }
 
-.nav-links li a::before {
+.nav-links li a::before,
+.logo::before,
+#ld::before,
+#dl::before {
     content: '';
     position: absolute;
     left: 0;
@@ -83,7 +87,10 @@
     transform: scale(1.05);
 }
 
-.nav-links li a:hover::before {
+.nav-links li a:hover::before,
+.logo:hover::before,
+#ld:hover::before,
+#dl:hover::before {
     transform: scaleX(1);
 }
 
@@ -150,6 +157,12 @@
     .bar-list {
         width: 10%;
         ;
+    }
+
+    .logo::before,
+    #ld::before,
+    #dl::before {
+        display: none;
     }
 
 }
@@ -455,8 +468,14 @@ section {
     padding: 2em;
     display: flex;
     width: 100%;
-    justify-content: space-between;
+
     align-items: center;
+}
+
+.cf {
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer-title {
@@ -467,6 +486,11 @@ section {
 .footer-title a {
     text-decoration: none;
     color: #0a49f6;
+    transition: 0.5s;
+}
+
+.footer-title a:hover {
+    color: #05298b;
 }
 
 .footer .soical-icons a {
@@ -535,7 +559,7 @@ section {
         align-items: center;
     }
 
-    .footer {
+    .cf {
         font-size: 0.8em;
         justify-content: space-evenly;
     }
@@ -723,6 +747,10 @@ section {
     background: #080808;
 }
 
+.dark-mode .footer-title a:hover {
+    color: #601cfc;
+}
+
 .dark-mode .footer .soical-icons a:hover {
     color: #601cfc;
 }
@@ -748,7 +776,7 @@ section {
 }
 
 .dark-mode .navbar {
-    background: #222;
+    background: #1c1c1e;
 }
 
 .dark-mode .logo {
@@ -763,6 +791,10 @@ section {
     color: #fff;
 }
 
+.dark-mode .nav-links {
+    background: #1c1c1e;
+}
+
 .dark-mode .nav-links li a.active {
     color: #601cfc;
 }
@@ -773,12 +805,10 @@ section {
     transform: scale(1.05);
 }
 
-.dark-mode .nav-links {
-    background-color: #222;
-    border-radius: 5px;
-}
 
-.dark-mode .nav-links li a::before {
+.dark-mode .nav-links li a::before,
+.dark-mode .logo::before,
+#dl::before {
     background-color: #601cfc;
 }
 
