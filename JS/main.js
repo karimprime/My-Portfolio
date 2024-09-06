@@ -111,10 +111,12 @@ function colors(color) {
         body.classList.add('dark-mode');
         ld.classList.add('hide');
         dl.classList.remove('hide');
+        body.style.transition = "0.5s";
     } else {
         body.classList.remove('dark-mode');
         dl.classList.add('hide');
         ld.classList.remove('hide');
+        body.style.transition = "0.5s";
     }
 }
 
@@ -129,10 +131,12 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.add('dark-mode');
             ld.classList.add('hide');
             dl.classList.remove('hide');
+            body.style.transition = "0.5s";
         } else {
             body.classList.remove('dark-mode');
             dl.classList.add('hide');
             ld.classList.remove('hide');
+            body.style.transition = "0.5s";
         }
     }
 });
